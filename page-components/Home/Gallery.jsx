@@ -15,7 +15,7 @@ export default function Index({galleryRef}) {
                     <Hidden xlUp>
                         <Grid container spacing={1}>
                             {
-                                [1, 2, 3, 4, 5, 6].map((each) => (
+                                [7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6].map((each) => (
                                     <Grid key={each} item md={4} xs={12}>
                                         <Box width={'100%'} boxShadow={'0px 0px 30px rgb(0 0 0 / 10%)'}>
                                             <img src={`/images/img${each}.jpg`} alt={'img'} width={'100%'} style={{height: '263px'}}/>
@@ -28,7 +28,7 @@ export default function Index({galleryRef}) {
                     <Hidden xlDown>
                         <Grid container spacing={1}>
                             {
-                                [1, 2, 3, 4, 5, 6].map((each) => (
+                                [7, 8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6].map((each) => (
                                     <Grid key={each} item md={4} xs={12}>
                                         <Box width={'100%'} boxShadow={'0px 0px 30px rgb(0 0 0 / 10%)'}>
                                             <img src={`/images/img${each}.jpg`} alt={'img'} width={'100%'} style={{height: '320px'}}/>
