@@ -10,6 +10,8 @@ import {
 } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
 import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import {useRouter} from "next/router";
+import {useEffect} from "react";
 const SocialButton = ({
   children,
   label,
@@ -44,6 +46,14 @@ const config = {
 }
 const theme = extendTheme({ config })
 function MyApp({ Component, pageProps }) {
+
+  const Router = useRouter()
+  useEffect(() => {
+    if(Router.pathname === '/register')
+      Router.push('/').catch((e) => console.log(e))
+  }, [Router])
+
+
   return (
     <ChakraProvider theme={theme}>
       <Component {...pageProps} />

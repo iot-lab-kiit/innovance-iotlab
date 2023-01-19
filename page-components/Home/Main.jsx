@@ -74,8 +74,8 @@ export default function Index({mainRef, scheduleRef}) {
 
                                 </Stack>
                             ) : (
-                                <Box letterSpacing={'5px'} fontWeight={900} fontSize={{md: '80px', xs: '40px'}} sx={{color: 'rgba(255, 255, 255, 0.85)'}}>
-                                    Event is Live!
+                                <Box letterSpacing={'5px'} fontWeight={900} fontSize={{md: '50px', xs: '14px'}} sx={{color: 'rgba(255, 255, 255, 0.85)'}}>
+                                   See you in the next event!
                                 </Box>
                             )
                         }
