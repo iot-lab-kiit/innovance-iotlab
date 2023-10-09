@@ -53,7 +53,7 @@ export default function Index({venueRef}) {
                                 <Box borderBottom={'2px solid #c3c3c3'} height={'2px'} width={{md: '100px', xs: '130px'}} sx={{opacity: 0.5}}/>
                             </Box>
                             <Box textAlign={'center'} color={'#bcbcbc'} maxWidth={'700px'}>
-                                Ahoy KIITians! Join us for Innovance in campus 15 and campus 17! Mark your calendars from 4th November to 6th November and be ready for unlimited fun!                            </Box>
+                                Ahoy KIITians! Join us for Innovance in campus 17! Mark your calendars from 4th November to 6th November and be ready for unlimited fun!                            </Box>
                             <Box display={'flex'} justifyContent={'center'} alignItems={'center'} width={'100%'} mt={10}>
                                 {/* {
                                     ['Campus 15', 'Campus 17'].map((each, index) => (
