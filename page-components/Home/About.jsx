@@ -8,9 +8,9 @@ export default function Index({aboutRef}) {
         <>
             <Container maxWidth={'lg'}>
                 <Box width={'100%'} fontSize={'18px'}>
-                    <Box mt={3} fontWeight={700} textAlign={'center'} color={'red'} fontSize={'24px'}>
-                        Registration Opening Soon !!
-                    </Box>
+                        {/* <Box mt={3} fontWeight={700} textAlign={'center'} color={'red'} fontSize={'24px'}>
+                            Registration Opening Soon !!
+                        </Box> */}
                     {/* <Box mt={3} fontWeight={700} textAlign={'center'} color={'red'}>
                         Message from IoT Lab
                     </Box>
