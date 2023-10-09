@@ -9,7 +9,7 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
-import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 const SocialButton = ({
@@ -71,8 +71,8 @@ function MyApp({ Component, pageProps }) {
             <SocialButton label={'Twitter'} href={'https://twitter.com/iotlabkiit'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'https://iotkiit.in'}>
-              <FaYoutube />
+            <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/company/iotlabkiit/'}>
+              <FaLinkedin />
             </SocialButton>
             <SocialButton label={'Instagram'} href={'https://www.instagram.com/iot.lab.kiit/'}>
               <FaInstagram />

@@ -38,7 +38,7 @@ export default function Index({mainRef, scheduleRef}) {
                             </Box>
                         </Box>
                         <Box color={'#FFF'} mt={5} fontWeight={500} fontSize={{md: '20px', xs: '16px'}}>
-                            CAMPUS 15 & CAMPUS 17
+                            CAMPUS 17
                         </Box>
                     </Box>
                     <Box width={'100%'} display={'flex'} justifyContent={'center'} mt={8}>
@@ -104,7 +104,7 @@ export default function Index({mainRef, scheduleRef}) {
                         >
                             Details
                         </Button>
-                        {
+                        {/* {
                             days + hours + minutes + seconds > 0 && (
                                 <Button
                                     sx={{
@@ -131,7 +131,7 @@ export default function Index({mainRef, scheduleRef}) {
                                     Register
                                 </Button>
                             )
-                        }
+                        } */}
                     </Box>
 
                 </Container>

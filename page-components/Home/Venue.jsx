@@ -55,7 +55,7 @@ export default function Index({venueRef}) {
                             <Box textAlign={'center'} color={'#bcbcbc'} maxWidth={'700px'}>
                                 Ahoy KIITians! Join us for Innovance in campus 15 and campus 17! Mark your calendars from 4th November to 6th November and be ready for unlimited fun!                            </Box>
                             <Box display={'flex'} justifyContent={'center'} alignItems={'center'} width={'100%'} mt={10}>
-                                {
+                                {/* {
                                     ['Campus 15', 'Campus 17'].map((each, index) => (
                                         <Button
                                             sx={{
@@ -83,7 +83,31 @@ export default function Index({venueRef}) {
                                             {each}
                                         </Button>
                                     ))
-                                }
+                                } */}
+                                <Button
+                                            sx={{
+                                                ml:0,
+                                                borderRadius: '30px',
+                                                textTransform: 'none',
+                                                py: 0.3,
+                                                px: 4,
+                                                fontSize: {md: '20px', xs: '16px'},
+                                                border: '1.5px solid #FFF',
+                                                "&:hover": {
+                                                    // background: "#4763B7",
+                                                    // border: '1.5px solid #4763B7'
+                                                    border: '1.5px solid #FFF'
+                                                },
+                                            }}
+                                            onClick={async () => {
+                                                window.open('https://goo.gl/maps/Szg68CUGrzvrLKED7', 'blank')
+                                            }}
+                                            variant={'outlined'}
+                                            color={'white'}
+                                            disableElevation
+                                        >
+                                            Campus 17
+                                        </Button>
                             </Box>
                         </Box>
 

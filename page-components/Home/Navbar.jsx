@@ -39,10 +39,10 @@ const Navbar = ({mainRef, aboutRef, scheduleRef, venueRef, planRef, sponsorRef, 
             ref: aboutRef,
             name: 'ABOUT'
         },
-        {
-            ref: scheduleRef,
-            name: 'TIMELINE'
-        },
+        // {
+        //     ref: scheduleRef,
+        //     name: 'TIMELINE'
+        // },
         {
             ref: venueRef,
             name: 'VENUE'
