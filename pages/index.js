@@ -22,6 +22,8 @@ export default function Index() {
     const galleryRef = useRef(null);
     const contactRef = useRef(null);
 
+    console.log("hii")
+
     return (
         <>
             <ThemeProvider theme={createTheme({
