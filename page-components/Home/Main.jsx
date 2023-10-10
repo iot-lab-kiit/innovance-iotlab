@@ -6,7 +6,7 @@
     import {useRouter} from "next/router";
     export default function Index({mainRef, scheduleRef}) {
         
-        const [days, hours, minutes, seconds] = useCountdown("2022-11-4 18:30");
+        const [days, hours, minutes, seconds] = useCountdown("2023-11-4 18:00");
         const countDown = [days, hours, minutes, seconds]
         const Router = useRouter();
 
