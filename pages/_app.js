@@ -66,7 +66,7 @@ function MyApp({ Component, pageProps }) {
           spacing={4}
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
-          <Text>© 2022 Innovance 2k22. All rights reserved</Text>
+          <Text>© 2023 Innovance 2k23. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
             <SocialButton label={'Twitter'} href={'https://twitter.com/iotlabkiit'}>
               <FaTwitter />
