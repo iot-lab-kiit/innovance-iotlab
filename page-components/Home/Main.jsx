@@ -30,18 +30,21 @@
                     <Container maxWidth={'lg'}>
                         <Box textAlign={'center'} width={'100%'} >
                             <Box lineHeight={0.6} position={'relative'}>
-                                <Box letterSpacing={'8px'} fontWeight={900} fontSize={{md: '130px', xs: '45px'}} sx={{color: 'rgba(255, 255, 255, 0.22)'}}>
+                                <Box letterSpacing={{xl:'8px', md:'6px'}} fontWeight={900} fontSize={{md: '130px', xs: '45px'}} sx={{color: 'rgba(255, 255, 255, 0.22)'}}>
                                     INNOVANCE
                                 </Box>
-                                <Box fontWeight={900} fontSize={{md: '90px', xs: '50px'}} color={'#FFF'} position={'absolute'} top={13} width={'100%'} textAlign={'center'} letterSpacing={'2.5px'} zIndex={1}>
+                                <Box letterSpacing={'8px'} fontWeight={900} fontSize={{md: '130px', xs: '45px'}} sx={{color: 'rgba(255, 255, 255, 0.22)'}} position={'relative'} top={99}>
+                                    2.0
+                                </Box>
+                                <Box fontWeight={900} fontSize={{md: '90px', xs: '50px'}} color={'#FFF'} position={'relative'} top={{xl:-52, lg:-54, md:40}} width={'100%'} textAlign={'center'} letterSpacing={'2.5px'} zIndex={1}>
                                     IoT Lab
                                 </Box>
                             </Box>
-                            <Box color={'#FFF'} mt={5} fontWeight={500} fontSize={{md: '20px', xs: '16px'}}>
+                            <Box color={'#FFF'} mt={5} fontWeight={600} fontSize={{md: '26px', xs: '18px'}} position={'relative'} top={82}>
                                 CAMPUS 17
                             </Box>
                         </Box>
-                        <Box width={'100%'} display={'flex'} justifyContent={'center'} mt={8}>
+                        <Box width={'100%'} display={'flex'} justifyContent={'center'} mt={8} position={'relative'} top={40}>
                             {
                                 days + hours + minutes + seconds > 0 ? (
                                     <Stack
@@ -80,7 +83,7 @@
                                 )
                             }
                         </Box>
-                        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} width={'100%'} mt={5}>
+                        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} width={'100%'} mt={5} position={'relative'} top={55}>
                             <Button
                                 sx={{
                                     borderRadius: '30px',
