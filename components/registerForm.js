@@ -672,7 +672,7 @@ export default function RegisterForm() {
                   NB: If you want to pay offline or using any other method
                   please visit any one of our remote registration booth or our LAB
                   at DL007 campus 15 anytime between 11 am to 7 PM. For any
-                  querry you can reach out to us on iotlab@kiit.ac.in
+                  query you can reach out to us on iotlab@kiit.ac.in
                 </text>
                 <Stack spacing={10} pt={2}>
                   <Button

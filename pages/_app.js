@@ -48,10 +48,25 @@ const theme = extendTheme({ config })
 function MyApp({ Component, pageProps }) {
 
   const Router = useRouter()
+  // useEffect(() => {
+  //   if(Router.pathname === '/register')
+  //     Router.push('/').catch((e) => console.log(e))
+  // }, [Router])
+
   useEffect(() => {
-    if(Router.pathname === '/register')
-      Router.push('/').catch((e) => console.log(e))
-  }, [Router])
+    const handleRouteChange = (url) => {
+      if (url === '/register') {
+        Router.push('/').catch((e) => console.log(e));
+      }
+    };
+  
+    Router.events.on('routeChangeStart', handleRouteChange);
+  
+    return () => {
+      Router.events.off('routeChangeStart', handleRouteChange);
+    };
+  }, [Router]);
+  
 
 
   return (

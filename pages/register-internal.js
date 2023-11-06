@@ -5,9 +5,9 @@ import Registerationpaused from "../components/registrationPaused";
 export default function Register() {
     return (
         <div>
-            <IndexNav />
-            <Registerationpaused />
-            {/* <RegisterForm2 /> */}
+            {/* <IndexNav /> */}
+            {/* <Registerationpaused /> */}
+            <RegisterForm2 />
         </div>
     )
 }
