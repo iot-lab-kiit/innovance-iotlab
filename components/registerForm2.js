@@ -27,9 +27,11 @@ import {
   StatArrow,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 export default function RegisterForm2() {
+  const Router = useRouter();
   const [showWpPh, setShowWpPh] = useState(false);
   const [formNumber, setFormNumber] = useState(0);
   const [firstName, setFirstName] = useState("");
@@ -41,8 +43,11 @@ export default function RegisterForm2() {
   const [whatsapp, setWhatsapp] = useState("");
   const [phone, setPhone] = useState("");
   const [planType, setPlanType] = useState("1");
+  const [planDescription, setPlanDescription] = useState(
+    "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event + Sub Events + Food"
+  );
   const [foodOpted, setFoodOpted] = useState(false);
-  const [totalFare, setTotalFare] = useState(99.0);
+  const [totalFare, setTotalFare] = useState(249.0);
   const [txnId, setTxnId] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [regError, setRegError] = useState(false);
@@ -66,32 +71,32 @@ export default function RegisterForm2() {
     if (isField2Valid) {
       setFormNumber(2);
     } else {
-      let planDescription = "";
-      if (planType === "1") {
-        planDescription =
-          "Basic Entry ( Opening & Closing Ceremony + Extra Events )";
-        if (foodOpted) {
-          planDescription += " + ₹499 (Food)";
-        }
-      } else if (planType === "2") {
-        planDescription =
-          "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Sub Events";
-        if (foodOpted) {
-          planDescription += " + ₹499 (Food)";
-        }
-      } else if (planType === "3") {
-        planDescription =
-          "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event";
-        if (foodOpted) {
-          planDescription += " + ₹499 (Food)";
-        }
-      } else if (planType === "4") {
-        planDescription =
-          "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event + Sub Events";
-        if (foodOpted) {
-          planDescription += " + ₹499 (Food)";
-        }
-      }
+      // let planDescription = "";
+      // if (planType === "1") {
+      //   planDescription =
+      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events )";
+      //   if (foodOpted) {
+      //     planDescription += " + ₹499 (Food)";
+      //   }
+      // } else if (planType === "2") {
+      //   planDescription =
+      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Sub Events";
+      //   if (foodOpted) {
+      //     planDescription += " + ₹499 (Food)";
+      //   }
+      // } else if (planType === "3") {
+      //   planDescription =
+      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event";
+      //   if (foodOpted) {
+      //     planDescription += " + ₹499 (Food)";
+      //   }
+      // } else if (planType === "4") {
+      //   planDescription =
+      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event + Sub Events";
+      //   if (foodOpted) {
+      //     planDescription += " + ₹499 (Food)";
+      //   }
+      // }
       const data = {
         first_name: firstName,
         last_name: lastName,
@@ -104,12 +109,13 @@ export default function RegisterForm2() {
         ph_number: phone,
         email_kiit: roll + "@kiit.ac.in",
         plan_type: planType,
-        food_opted: foodOpted,
+        // food_opted: foodOpted,
         total_fare: totalFare,
         txn_id: txnId,
         plan_description: planDescription,
       };
-      fetch("https://api.iotkiit.in/items/innovance_registration", {
+      // fetch("https://api.iotkiit.in/items/innovance_registration", {
+      fetch("https://api.iotkiit.in/items/innovance2023_registration", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -164,7 +170,7 @@ export default function RegisterForm2() {
       setBranchError(true);
       isField1Valid = true;
     }
-    if (year != "2" && year != "3" && year != "4") {
+    if (year != "1" && year != "2" && year != "3" && year != "4") {
       setYearError(true);
       isField1Valid = true;
     }
@@ -183,7 +189,7 @@ export default function RegisterForm2() {
     }
   };
 
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
 
   return (
     <div>
@@ -211,10 +217,10 @@ export default function RegisterForm2() {
             {formNumber === 0
               ? "Personal Information"
               : formNumber === 1
-                ? "Plan Information"
-                : formNumber === 2
-                  ? "Payment Info"
-                  : ""}
+              ? "Plan Information"
+              : formNumber === 2
+              ? "Payment Info"
+              : ""}
           </Heading>
           {formNumber === 0 ? (
             <Box rounded={"lg"} bg={"gray.700"} boxShadow={"lg"} p={8}>
@@ -297,6 +303,7 @@ export default function RegisterForm2() {
                           setYear(e.target.value);
                         }}
                       >
+                        <option value="1">1ST</option>
                         <option value="2">2ND</option>
                         <option value="3">3RD</option>
                         <option value="4">4TH</option>
@@ -461,7 +468,7 @@ export default function RegisterForm2() {
                 </Stack>
                 <FormControl id="plan" isRequired>
                   <FormLabel>Plan Type</FormLabel>
-                  <Select
+                  {/* <Select
                     value={planType}
                     onChange={(e) => {
                       setPlanType(e.target.value);
@@ -497,9 +504,14 @@ export default function RegisterForm2() {
                     <option value="4">
                       Basic Entry & SubEvents & Main Event - ₹249
                     </option>
-                  </Select>
+                  </Select> */}
+                  <HStack>
+                    <Text fontSize="xl" as="b">
+                      {planDescription}
+                    </Text>
+                  </HStack>
                 </FormControl>
-                <FormControl id="branch" isRequired>
+                {/* <FormControl id="branch" isRequired>
                   <FormLabel>
                     Opting for Food Facility ( ₹499 for 3 days)
                   </FormLabel>
@@ -531,7 +543,7 @@ export default function RegisterForm2() {
                       setFoodOpted(!foodOpted);
                     }}
                   />
-                </FormControl>
+                </FormControl> */}
                 <Stat>
                   <StatLabel>Total Fee</StatLabel>
                   <StatNumber>₹ {totalFare.toFixed(2)}</StatNumber>
@@ -565,7 +577,7 @@ export default function RegisterForm2() {
               >
                 <ModalOverlay />
                 <ModalContent>
-                  <ModalHeader>Registraion Failed</ModalHeader>
+                  <ModalHeader>Registration Failed</ModalHeader>
                   <ModalCloseButton />
                   <ModalBody>
                     <Text>{errorMessage}</Text>
@@ -591,8 +603,9 @@ export default function RegisterForm2() {
               </Stack>
               <Stack pt={6}></Stack>
               <Stack spacing={4}>
-                <img src={`/images/qr2.jpeg`} alt={'img'} width={'100%'} />
-                <Stack pt={6}></Stack><Text as="em" color='tomato'>
+                <img src={`/images/qr2.jpeg`} alt={"img"} width={"100%"} />
+                <Stack pt={6}></Stack>
+                <Text as="em" color="tomato">
                   After the transaction please enter the transaction id below
                 </Text>
                 <FormControl id="email" isRequired isInvalid={txnIdError}>
@@ -646,8 +659,8 @@ export default function RegisterForm2() {
                   size="lg"
                   bg={"blue.400"}
                   color={"white"}
-                  onClick={() => {
-                    window.location.href = "https://iotkiit.in";
+                  onClick={async () => {
+                    await Router.push("/");
                   }}
                   _hover={{
                     bg: "blue.500",
