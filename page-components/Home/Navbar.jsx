@@ -5,6 +5,7 @@ import Button from '@mui/material/Button';
 import Image from "next/image";
 import LogoDark from "../../public/images/innovance-light.svg";
 import LogoLight from "../../public/images/innovance-dark.svg";
+import NewLogoLight from "../../public/images/innovance-light_2023.png"
 import {Container, Hidden} from "@mui/material";
 import {useRouter} from "next/router";
 import {useCountdown} from "../useCountdown";
@@ -15,7 +16,7 @@ const Navbar = ({mainRef, aboutRef, scheduleRef, venueRef, planRef, sponsorRef, 
     const navRef = useRef();
     const Router = useRouter();
 
-    const [days, hours, minutes, seconds] = useCountdown("2022-11-4 18:30");
+    const [days, hours, minutes, seconds] = useCountdown("2023-11-4 18:00");
 
 
     useEffect(() => {
@@ -85,7 +86,7 @@ const Navbar = ({mainRef, aboutRef, scheduleRef, venueRef, planRef, sponsorRef, 
                                 }}
                             >
                                 {
-                                    !onTop ? (<Image src={LogoDark} alt={'logo'} />) : (<Image src={LogoLight} alt={'logo'} />)
+                                    !onTop ? (<Image src={LogoDark} alt={'logo'} />) : (<Image src={NewLogoLight} alt={'logo'} />)
                                 }
                             </Box>
                             <Box display={'flex'} alignItems={'center'}>
@@ -125,7 +126,7 @@ const Navbar = ({mainRef, aboutRef, scheduleRef, venueRef, planRef, sponsorRef, 
                                             onClick={async () => {
                                                 await Router.push('/register')
                                             }}
-                                            disabled={days + hours + minutes + seconds <= 0}
+                                            enabled={days + hours + minutes + seconds <= 0}
                                         >
                                             Register
                                         </Button>

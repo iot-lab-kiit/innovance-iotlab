@@ -2,13 +2,18 @@
     import Box from "@mui/material/Box";
     import Divider from "@mui/material/Divider";
     import Button from "@mui/material/Button";
+    import { useState, useEffect } from 'react';
     import {useCountdown} from "../useCountdown";
     import {useRouter} from "next/router";
     export default function Index({mainRef, scheduleRef}) {
-        
-        const [days, hours, minutes, seconds] = useCountdown("2023-11-4 18:00");
+        const [isClient, setIsClient] = useState(false);
+        const [days, hours, minutes, seconds] = useCountdown("2023-11-18 18:00");
         const countDown = [days, hours, minutes, seconds]
         const Router = useRouter();
+
+        useEffect(() => {
+            setIsClient(true)
+          }, [])
 
         return (
             <>
@@ -28,7 +33,7 @@
                     }}
                 >
                     <Container maxWidth={'lg'}>
-                        <Box textAlign={'center'} width={'100%'} >
+                    <Box textAlign={'center'} width={'100%'} >
                             <Box lineHeight={0.6} position={'relative'}>
                                 <Box letterSpacing={'8px'} fontWeight={900} fontSize={{md: '130px', xs: '45px'}} sx={{color: 'rgba(255, 255, 255, 0.22)'}}>
                                     INNOVANCE
@@ -41,9 +46,9 @@
                                 CAMPUS 17
                             </Box>
                         </Box>
-                        <Box width={'100%'} display={'flex'} justifyContent={'center'} mt={8}>
+                        <Box width={'100%'} display={'flex'} justifyContent={'center'} mt={8} position={'relative'} top={40}>
                             {
-                                days + hours + minutes + seconds > 0 ? (
+                                isClient? (days + hours + minutes + seconds > 0 ? (
                                     <Stack
                                         direction="row"
                                         divider={<Divider orientation="vertical" flexItem color={'white'}/>}
@@ -78,9 +83,12 @@
                                     Coming Soon !!
                                     </Box>
                                 )
+                                ) : (
+                                    <></>
+                                )
                             }
                         </Box>
-                        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} width={'100%'} mt={5}>
+                        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} width={'100%'} mt={5} position={'relative'} top={55}>
                             <Button
                                 sx={{
                                     borderRadius: '30px',
@@ -104,7 +112,7 @@
                             >
                                 Details
                             </Button>
-                            {/* {
+                            {
                                 days + hours + minutes + seconds > 0 && (
                                     <Button
                                         sx={{
@@ -131,7 +139,7 @@
                                         Register
                                     </Button>
                                 )
-                            } */}
+                            }
                         </Box>
 
                     </Container>
