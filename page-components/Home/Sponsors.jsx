@@ -41,7 +41,7 @@ export default function Index({sponsorRef}) {
             <Box width={'100%'} py={10} bgcolor={'#F5F5F5'} ref={sponsorRef} position={"relative"}>
                 {/*<Container maxWidth={'lg'}>*/}
                     <Box width={'100%'} display={'flex'} justifyContent={'center'} flexDirection={'column'} alignItems={'center'} mt={4}>
-                        <Title first={'The Event'} second={'Sponsors'} />
+                        <Title first={'Our Previous'} second={'Sponsors'} />
                         <Box textAlign={'center'} color={'#616161'}>
                             We are very grateful to our sponsors. Without their support and help, this event wouldn't have been possible. We heartily thank you all.                        </Box>
                         <Box mt={8} />

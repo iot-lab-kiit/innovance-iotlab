@@ -27,9 +27,12 @@ import {
   StatArrow,
   useColorModeValue,
 } from "@chakra-ui/react";
+import { TextField } from "@mui/material";
+import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
 
 export default function RegisterForm() {
+  const Router = useRouter();
   const [showWpPh, setShowWpPh] = useState(false);
   const [formNumber, setFormNumber] = useState(0);
   const [firstName, setFirstName] = useState("");
@@ -41,8 +44,11 @@ export default function RegisterForm() {
   const [whatsapp, setWhatsapp] = useState("");
   const [phone, setPhone] = useState("");
   const [planType, setPlanType] = useState("1");
+  const [planDescription, setPlanDescription] = useState(
+    "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event + Sub Events + Food"
+  );
   const [foodOpted, setFoodOpted] = useState(false);
-  const [totalFare, setTotalFare] = useState(99.0);
+  const [totalFare, setTotalFare] = useState(249.0);
   const [txnId, setTxnId] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [regError, setRegError] = useState(false);
@@ -66,32 +72,32 @@ export default function RegisterForm() {
     if (isField2Valid) {
       setFormNumber(2);
     } else {
-      let planDescription = "";
-      if (planType === "1") {
-        planDescription =
-          "Basic Entry ( Opening & Closing Ceremony + Extra Events )";
-        if (foodOpted) {
-          planDescription += " + ₹499 (Food)";
-        }
-      } else if (planType === "2") {
-        planDescription =
-          "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Sub Events";
-        if (foodOpted) {
-          planDescription += " + ₹499 (Food)";
-        }
-      } else if (planType === "3") {
-        planDescription =
-          "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event";
-        if (foodOpted) {
-          planDescription += " + ₹499 (Food)";
-        }
-      } else if (planType === "4") {
-        planDescription =
-          "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event + Sub Events";
-        if (foodOpted) {
-          planDescription += " + ₹499 (Food)";
-        }
-      }
+      // let planDescription = "";
+      // if (planType === "1") {
+      //   planDescription =
+      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events )";
+      //   if (foodOpted) {
+      //     planDescription += " + ₹499 (Food)";
+      //   }
+      // } else if (planType === "2") {
+      //   planDescription =
+      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Sub Events";
+      //   if (foodOpted) {
+      //     planDescription += " + ₹499 (Food)";
+      //   }
+      // } else if (planType === "3") {
+      //   planDescription =
+      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event";
+      //   if (foodOpted) {
+      //     planDescription += " + ₹499 (Food)";
+      //   }
+      // } else if (planType === "4") {
+      //   planDescription =
+      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event + Sub Events";
+      //   if (foodOpted) {
+      //     planDescription += " + ₹499 (Food)";
+      //   }
+      // }
       const data = {
         first_name: firstName,
         last_name: lastName,
@@ -104,12 +110,13 @@ export default function RegisterForm() {
         ph_number: phone,
         email_kiit: roll + "@kiit.ac.in",
         plan_type: planType,
-        food_opted: foodOpted,
+        // food_opted: foodOpted,
         total_fare: totalFare,
         txn_id: txnId,
         plan_description: planDescription,
       };
-      fetch("https://api.iotkiit.in/items/innovance_registration", {
+      // fetch("https://api.iotkiit.in/items/innovance_registration", {
+      fetch("https://api.iotkiit.in/items/innovance2023_registration", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -147,7 +154,6 @@ export default function RegisterForm() {
     setWhatsappError(false);
     setPhoneError(false);
     let isField1Valid = false;
-
     if (firstName.length < 2) {
       setFirstNameError(true);
       isField1Valid = true;
@@ -164,7 +170,7 @@ export default function RegisterForm() {
       setBranchError(true);
       isField1Valid = true;
     }
-    if (year != "2" && year != "3" && year != "4") {
+    if (year != "1" && year != "2" && year != "3" && year != "4") {
       setYearError(true);
       isField1Valid = true;
     }
@@ -183,7 +189,7 @@ export default function RegisterForm() {
     }
   };
 
-  useEffect(() => { }, []);
+  useEffect(() => {}, []);
 
   return (
     <div>
@@ -211,10 +217,10 @@ export default function RegisterForm() {
             {formNumber === 0
               ? "Personal Information"
               : formNumber === 1
-                ? "Plan Information"
-                : formNumber === 2
-                  ? "Payment Info"
-                  : ""}
+              ? "Plan Information"
+              : formNumber === 2
+              ? "Payment Info"
+              : ""}
           </Heading>
           {formNumber === 0 ? (
             <Box rounded={"lg"} bg={"gray.700"} boxShadow={"lg"} p={8}>
@@ -297,6 +303,7 @@ export default function RegisterForm() {
                           setYear(e.target.value);
                         }}
                       >
+                        <option value="1">1ST</option>
                         <option value="2">2ND</option>
                         <option value="3">3RD</option>
                         <option value="4">4TH</option>
@@ -461,7 +468,7 @@ export default function RegisterForm() {
                 </Stack>
                 <FormControl id="plan" isRequired>
                   <FormLabel>Plan Type</FormLabel>
-                  <Select
+                  {/* <Select
                     value={planType}
                     onChange={(e) => {
                       setPlanType(e.target.value);
@@ -497,9 +504,14 @@ export default function RegisterForm() {
                     <option value="4">
                       Basic Entry & SubEvents & Main Event - ₹249
                     </option>
-                  </Select>
+                  </Select> */}
+                  <HStack>
+                    <Text fontSize="xl" as="b">
+                      {planDescription}
+                    </Text>
+                  </HStack>
                 </FormControl>
-                <FormControl id="branch" isRequired>
+                {/* <FormControl id="branch" isRequired>
                   <FormLabel>
                     Opting for Food Facility ( ₹499 for 3 days)
                   </FormLabel>
@@ -531,11 +543,11 @@ export default function RegisterForm() {
                       setFoodOpted(!foodOpted);
                     }}
                   />
-                </FormControl>
+                </FormControl> */}
                 <Stat>
                   <StatLabel>Total Fee</StatLabel>
                   <StatNumber>₹ {totalFare.toFixed(2)}</StatNumber>
-                  {planType === "3" && foodOpted ? (
+                  {/* {planType === "3" && foodOpted ? (
                     <StatHelpText>
                       <StatArrow type="decrease" />
                       5.12%
@@ -547,7 +559,7 @@ export default function RegisterForm() {
                     </StatHelpText>
                   ) : (
                     <></>
-                  )}
+                  )} */}
                 </Stat>
                 <Stack spacing={10} pt={2}>
                   <Button
@@ -578,7 +590,7 @@ export default function RegisterForm() {
               >
                 <ModalOverlay />
                 <ModalContent>
-                  <ModalHeader>Registraion Failed</ModalHeader>
+                  <ModalHeader>Registration Failed</ModalHeader>
                   <ModalCloseButton />
                   <ModalBody>
                     <Text>{errorMessage}</Text>
@@ -601,20 +613,20 @@ export default function RegisterForm() {
                 >
                   Go to previous page
                 </Button>
-              </Stack>
+              </Stack>{" "}
+              <HStack>
+                <Text fontSize="xl" as="b">
+                  {" "}
+                  Bank Account Name:{" "}
+                </Text>
+                <Text fontSize="xl"> KIIT UNIVERSITY</Text>
+              </HStack>
               <Stack pt={6}></Stack>
-              <Text fontSize="lg" as="u" color='tomato'>
+              <Text fontSize="lg" as="u" color="tomato">
                 Please do an RTGS or NIFT Transaction using below details.
               </Text>
               <Stack pt={6}></Stack>
               <Stack spacing={4}>
-                <HStack>
-                  <Text fontSize="xl" as="b">
-                    {" "}
-                    Bank Account Name:{" "}
-                  </Text>
-                  <Text fontSize="xl"> KIIT UNIVERSITY</Text>
-                </HStack>
                 <HStack>
                   <Text fontSize="xl" as="b">
                     {" "}
@@ -650,7 +662,8 @@ export default function RegisterForm() {
                   </Text>
                   <Text fontSize="xl"> CNRB0004915</Text>
                 </HStack>
-                <Stack pt={6}></Stack><Text as="em" color='tomato'>
+                <Stack pt={6}></Stack>
+                <Text as="em" color="tomato">
                   After the transaction please enter the transaction id below
                 </Text>
                 <FormControl id="email" isRequired isInvalid={txnIdError}>
@@ -670,8 +683,8 @@ export default function RegisterForm() {
                 </FormControl>
                 <text>
                   NB: If you want to pay offline or using any other method
-                  please visit any one of our remote registration booth or our LAB
-                  at DL007 campus 15 anytime between 11 am to 7 PM. For any
+                  please visit any one of our remote registration booth or our
+                  LAB at DL007 campus 15 anytime between 11 am to 7 PM. For any
                   query you can reach out to us on iotlab@kiit.ac.in
                 </text>
                 <Stack spacing={10} pt={2}>
@@ -710,8 +723,8 @@ export default function RegisterForm() {
                   size="lg"
                   bg={"blue.400"}
                   color={"white"}
-                  onClick={() => {
-                    window.location.href = "https://iotkiit.in";
+                  onClick={async () => {
+                    await Router.push("/");
                   }}
                   _hover={{
                     bg: "blue.500",

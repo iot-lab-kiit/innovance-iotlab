@@ -43,7 +43,7 @@
                                 </Box>
                             </Box>
                             <Box color={'#FFF'} mt={5} fontWeight={500} fontSize={{md: '20px', xs: '16px'}}>
-                                CAMPUS 17
+                                CAMPUS 7 & CAMPUS 17
                             </Box>
                         </Box>
                         <Box width={'100%'} display={'flex'} justifyContent={'center'} mt={8} position={'relative'} top={40}>
@@ -89,7 +89,7 @@
                             }
                         </Box>
                         <Box display={'flex'} justifyContent={'center'} alignItems={'center'} width={'100%'} mt={5} position={'relative'} top={55}>
-                            <Button
+                            {/* <Button
                                 sx={{
                                     borderRadius: '30px',
                                     textTransform: 'none',
@@ -111,7 +111,7 @@
                                 }}
                             >
                                 Details
-                            </Button>
+                            </Button> */}
                             {
                                 days + hours + minutes + seconds > 0 && (
                                     <Button
