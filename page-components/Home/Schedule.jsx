@@ -75,7 +75,6 @@ export default function Index({scheduleRef}) {
                                                     )
                                                 }
                                                 <Box p={2}></Box>
-                                                <Chip label={each.type} variant="outlined" />
                                                 <Chip label={each.venue} variant="outlined" />
                                             </Box>
                                         </Box>
