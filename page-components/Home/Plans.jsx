@@ -38,7 +38,7 @@ export default function Index({planRef}) {
                                                     transform: {md: 'scale(1.1) translate(0 ,-5px)', xs: 0},
                                                 },
                                             }}
-                                            height={{md: '390px', xs: '410px'}}
+                                            height={{md: '390px', xs: '490px'}}
                                         >
                                             <Box width={'100%'} display={'flex'} alignItems={'center'} flexDirection={'column'}>
                                                 <Box fontSize={'18px'} fontWeight={600} letterSpacing={1.7} mb={2}>
