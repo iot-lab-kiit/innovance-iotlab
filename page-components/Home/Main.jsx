@@ -133,7 +133,7 @@
                                         color={'white'}
                                         disableElevation
                                         onClick={async () => {
-                                            await Router.push('/register')
+                                            await Router.push('/register-internal')
                                         }}
                                     >
                                         Register

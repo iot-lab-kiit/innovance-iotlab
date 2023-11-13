@@ -124,7 +124,7 @@ const Navbar = ({mainRef, aboutRef, scheduleRef, venueRef, planRef, sponsorRef, 
                                             variant={'contained'}
                                             disableElevation
                                             onClick={async () => {
-                                                await Router.push('/register')
+                                                await Router.push('/register-internal')
                                             }}
                                             enabled={days + hours + minutes + seconds <= 0}
                                         >
