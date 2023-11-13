@@ -11,7 +11,7 @@ export default function Index({contactRef}) {
 
     return (
         <>
-            <Box width={'100%'} py={10} bgcolor={'#F5F5F5'} ref={contactRef}>
+            <Box width={'100%'} py={10} bgcolor={'#FFF'} ref={contactRef}>
                 <Container maxWidth={'lg'}>
                     <Box width={'100%'} display={'flex'} justifyContent={'center'} flexDirection={'column'} alignItems={'center'} mt={4}>
                         <Title first={'Contact'} second={'Us'} />

@@ -6,7 +6,7 @@ export default function Index({galleryRef}) {
 
     return (
         <>
-            <Box width={'100%'} py={10} bgcolor={'#FFF'} ref={galleryRef} px={{md: 3, xs: 1}}>
+            <Box width={'100%'} py={10} bgcolor={'#F5F5F5'} ref={galleryRef} px={{md: 3, xs: 1}}>
                 <Box width={'100%'} display={'flex'} justifyContent={'center'} flexDirection={'column'} alignItems={'center'} mt={4} mb={4}>
                     <Title first={'Media'} second={'Gallery'} />
                     <Box textAlign={'center'} color={'#616161'} maxWidth={'750px'}>

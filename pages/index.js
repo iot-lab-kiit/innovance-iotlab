@@ -10,8 +10,18 @@ import Gallery from "../page-components/Home/Gallery";
 import Contact from "../page-components/Home/Contact";
 import Venue from "../page-components/Home/Venue";
 import {useRef} from 'react';
+import People from '../page-components/Home/People';
 
-export default function Index() {
+
+export const getStaticProps = async () => {
+    const res = await fetch('https://api.iotkiit.in/items/innovance_team');
+    const data = await res.json();
+    return {
+        props: { list: data.data }
+    }
+}
+
+export default function Index(props) {
 
     const mainRef = useRef(null);
     const aboutRef = useRef(null);
@@ -19,10 +29,11 @@ export default function Index() {
     const venueRef = useRef(null);
     const planRef = useRef(null);
     const sponsorRef = useRef(null);
+    const peopleRef = useRef(null);
     const galleryRef = useRef(null);
     const contactRef = useRef(null);
 
-    console.log("hii")
+    console.log("test")
 
     return (
         <>
@@ -57,6 +68,7 @@ export default function Index() {
                     <Venue venueRef={venueRef} />
                     {/*<Plans planRef={planRef} />*/}
                     <Sponsors sponsorRef={sponsorRef} />
+                    <People peopleRef={peopleRef} list = {props.list} />
                     <Gallery galleryRef={galleryRef} />
                     <Contact contactRef={contactRef} />
                 </Box>
