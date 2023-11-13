@@ -53,7 +53,7 @@ export default function Index() {
           />
           <Main mainRef={mainRef} scheduleRef={scheduleRef} />
           <About aboutRef={aboutRef} />
-          {/* <Schedule scheduleRef={scheduleRef} /> */}
+          <Schedule scheduleRef={scheduleRef} />
           <Venue venueRef={venueRef} />
           {/*<Plans planRef={planRef} />*/}
           <Sponsors sponsorRef={sponsorRef} />
