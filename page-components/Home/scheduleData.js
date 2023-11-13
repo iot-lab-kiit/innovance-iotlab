@@ -2,135 +2,108 @@ export const scheduleData = [
     {
         schedule: [
             {
-                timing: 'November 4, 6:00pm - 6:30pm',
+                timing: 'November 18, 6:00pm - 6:30pm',
                 title: 'Opening Ceremony',
                 type: 'Base Event',
-                venue: 'Campus 17 Auditorium',
+                venue: 'Campus 7 Auditorium',
             },
             {
-                timing: 'November 4, 6:30pm - 7:45pm',
-                title: 'Career Conference',
+                timing: 'November 4, 6:30pm - 7:00pm',
+                title: 'Cultural Performance ',
                 type: 'Extra Event',
-                description: 'An interactive career guidance session which will include tips on resume building and linkedin.',
-                venue: 'Campus 17 Auditorium',
-            },
-        ]
-    },
-    {
-        schedule: [
-            {
-                timing: 'November 5, 10:00am - 12:00pm',
-                title: 'Cyber: Kernal Panic Day1',
-                type: 'Sub Event',
-                description: 'An informative webinar on basics of Cyber Security and Penetration Testing. A short OnA.',                
-                venue: 'Campus 17 Auditorium',
+                description: '',
+                venue: 'Campus 7 Auditorium',
+
             },
             {
-                timing: 'November 5, 10:00am - 12:00pm',
-                title: 'Marketing: The Hawk-Eye',
-                type: 'Sub Event',
-                description: 'Check your grasp on brands by engaging in a thrilling guessing game! Team Limit: 2-5 members',                
-                venue: 'Campus 15 Block A',
-            },
-            {
-                timing: 'November 5, 12:15pm - 1:45pm',
-                title: 'Web: CodeHackday Day1',
-                type: 'Sub Event',
-                description: 'A webinar on a new technology.',                
-                venue: 'Campus 17 Auditorium',
-            },
-            {
-                timing: 'November 5, 12:15pm - 1:45pm',
-                title: 'Content: Know What You Write',
-                type: 'Sub Event',
-                description: 'A seminar on how to pick up content writing as a career, different tools and types of content. An interactive Q&A!',                
-                venue: 'Campus 15 Block A',
-            },
-            {
-                timing: 'November 5, 12:15pm - 1:45pm',
-                title: 'Content: Buzzing Fiction\'s',
-                type: 'Sub Event',
-                description: 'A seminar on how to pick up content writing as a career, different tools and types of content. \n An interactive QnA followed by a quick buzzing round of fiction to test your literary skills!',
-                venue: 'Campus 15 Block A',
-            },
-            {
-                timing: 'November 5, 2:00pm - 6:30pm',
-                title: 'UpShot Day1',
-                type: 'Main Event',
-                description: 'An interactive and informative session by loT Lab\'s seniors on how to build and deliver an entire project from scratch! Including Conceptualization, Execution, Implementation and Pitching!',
-                venue: 'Campus 17 Auditorium',
-            },
-            {
-                timing: 'November 5, 2:15pm - 4:15pm',
-                title: 'App: UI with Bugdroid',
-                type: 'Sub Event',
-                description: 'An interactive webinar about various UI components followed by a round of exciting coding.',
-                venue: 'Campus 15 Block A',
-            },
-            {
-                timing: 'November 5, 4:30pm - 6:00pm',
-                title: 'loT: Ard-U-Know - Hackathon',
-                type: 'Sub Event',
-                description: 'An opportunity to choose a case study and create your own working model!',
-                venue: 'Campus 15 Block A',
-            },
-            {
-                timing: 'November 5, 4:30pm - 6:00pm',
-                title: 'loT: Ard-U-Know - Trivia',
-                type: 'Sub Event',
-                description: 'A quiz round of loT-related questions with rewards for correct answers.',
-                venue: 'Campus 15 Block A',
-            },
-            {
-                timing: 'November 5, 6:00pm - 7:00pm',
-                title: 'Extra Events',
-                type: 'Extra Event',
-                description: 'Fun bite sized events including e-sports and musical jam.',
-                venue: 'Campus 17 Auditorium',
-            },
-        ]
-    },
-    {
-        schedule: [
-            {
-                timing: 'November 6, 09:00am - 10:00am',
-                title: 'Competitive Programming',
-                type: 'Sub Event',
-                description: 'A thrilling online coding competition where participants will battle for the win!',
-                venue: 'Campus 17 Auditorium or Online',
-            },
-            {
-                timing: 'November 6, 10:30am - 12:00pm',
-                title: 'Cyber: Kernal Panic Day2',
-                type: 'Sub Event',
-                description: 'A fun gamified contest of hacking into a system to find hidden items. A short OnA!',
-                venue: 'Campus 17 Auditorium',
-            },
-            {
-                timing: 'November 5, 12:00pm - 6:00pm',
-                title: 'UpShot Day2',
-                type: 'Main Event',
-                description: 'An interactive and informative session by loT Lab\'s seniors on how to build and deliver an entire project from scratch! Including Conceptualization, Execution, Implementation and Pitching!',
-                venue: 'Campus 17 Auditorium',
-            },
-            {
-                timing: 'November 6, 12:15pm - 1:45pm',
-                title: 'Content: Write It Out',
-                type: 'Sub Event',
-                description: 'A competition on writing content of different types explained on day 2.',
-                venue: 'Campus 15 Block A',
-            },
-            {
-                timing: 'November 6, 2:15pm - 4:15pm',
-                title: 'Video: Brand Race',
-                type: 'Sub Event',
-                description: 'Two rounds of video-making and presentations where creativity and pitching wit converge! Team limit: 2 members',
-                venue: 'Campus 15 Block A',
-            },
-            {
-                timing: 'November 6, 6:00pm - 7:00pm',
-                title: 'Closing Ceremony',
+                timing: 'November 4, 7:00pm - 7:30pm',
+                title: 'Career Conference ',
                 type: 'Base Event',
+                description: 'An interactive career guidance session which will include tips on resume building and linkedin.',
+                venue: 'Campus 7 Auditorium',
+            },
+        ]
+    },
+    {
+        schedule: [
+            {
+                timing: 'November 19, 10:00m - 5pm',
+                title: 'FuturaForage',
+                type: 'Main Event',
+                description: 'Embark on an innovative journey! From ideation to coding, master the art of documentation, design, and collaboration using Figma and Git. Explore the concepts of Frontend and Backend Dev with top trending tech stacks. Integrate ML, CyberSecurity, and IoT seamlessly. Prioritize security, testing, and smooth deployment. Learn effective project/product marketing strategies and pitch your ideas for expert guidance from our top IoT Lab teams.',
+                venue: 'Campus 17 Auditorium',
+
+            },
+            {
+                timing: 'November 19, 10:00m - 10:30am',
+                title: ' IdeaInscribe',
+                type: 'Main Event',
+                description: 'Refine your ideas and document them for a hasslefree workflow.',
+                venue: 'Campus 17 Auditorium',
+
+            },
+            {
+                timing: 'November 19, 10:30am - 10:45am',
+                title: 'ScopeSprint ',
+                type: 'Main Event',
+                description: 'Define the problem and its boundaries.',
+                venue: 'Campus 17 Auditorium',
+
+            },
+            {
+                timing: 'November 19, 10:45am - 11:15am',
+                title: 'CollabConnect',
+                type: 'Main Event',
+                description: 'Assemble a team and work seamlessly with them.',                
+                venue: 'Campus 17 Auditorium',
+            },
+            {
+                timing: 'November 19, 11:15am - 11:40am',
+                title: 'Sketch-To-Scale',
+                type: 'Main Event',
+                description: 'A seminar on how to pick up content writing as a career, different tools and types of content. An interactive Q&A!',                
+                venue: 'Campus 17 Auditorium',
+            },
+            {
+                timing: 'November 19, 11:40am - 1:45pm',
+                title: ' InnoBuild ',
+                type: 'Main Event',
+                description: 'Code your project in a way that’s easy to understand and maintain.',
+                venue: 'Campus 15 Block A',
+            },
+            {
+                timing: 'November 19, 3:00pm - 4:00pm',
+                title: 'DomainBlend',
+                type: 'Main Event',
+                description: 'Integrate multiple domains, such as ML, IoT, Cyber Security and more seamlessly.',
+                venue: 'Campus 17 Auditorium',
+            },
+            {
+                timing: 'November 19, 4:00pm - 4:15pm',
+                title: 'CodeConserve ',
+                type: 'Main Event',
+                description: 'Learn the best practices to maintain your project to keep it updated',
+                venue: 'Campus 17 Auditorium',
+            },
+            {
+                timing: 'November 19, 4:15pm - 4:40pm',
+                title: ' BrandBlitz',
+                type: 'Main Event',
+                description: 'Pitch your projects and convert the projects into a product',
+                venue: 'Campus 17 Auditorium',
+            },
+            {
+                timing: 'November 19, 5:00pm - 7:00pm',
+                title: 'Speaker’s Session',
+                type: 'Main Event',
+                description: 'Hear from our guest speaker about their incredible journey and harness their decade long wisdom and experience in just hours.',
+                venue: 'Campus 17 Auditorium',
+            },
+            {
+                timing: 'November 19, 7:00pm - 8:00pm',
+                title: 'Closing Ceremony ',
+                type: 'Base Event',
+                description: 'Fun bite sized events including dance and musical jam.',
                 venue: 'Campus 17 Auditorium',
             },
         ]
