@@ -27,7 +27,7 @@ export const scheduleData = [
     {
         schedule: [
             {
-                timing: 'November 19, 10:00m - 5pm',
+                timing: 'November 19, 10:00am - 5pm',
                 title: 'FuturaForage',
                 type: 'Main Event',
                 description: 'Embark on an innovative journey! From ideation to coding, master the art of documentation, design, and collaboration using Figma and Git. Explore the concepts of Frontend and Backend Dev with top trending tech stacks. Integrate ML, CyberSecurity, and IoT seamlessly. Prioritize security, testing, and smooth deployment. Learn effective project/product marketing strategies and pitch your ideas for expert guidance from our top IoT Lab teams.',
@@ -35,7 +35,7 @@ export const scheduleData = [
 
             },
             {
-                timing: 'November 19, 10:00m - 10:30am',
+                timing: 'November 19, 10:00am - 10:30am',
                 title: ' IdeaInscribe',
                 type: 'Main Event',
                 description: 'Refine your ideas and document them for a hasslefree workflow.',
