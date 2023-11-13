@@ -202,7 +202,7 @@ export default function RegisterForm2() {
         <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
           <Stack align={"center"}>
             <Heading fontSize={"4xl"} textAlign={"center"}>
-              Register Internal
+              Register Now!!
             </Heading>
             <Text fontSize={"lg"} color={"gray.00"}>
               to enjoy all of our cool events ✌️

@@ -72,7 +72,7 @@ export default function Index({planRef}) {
                                                     // fontSize: {md: '20px', xs: '16px'},
                                                 }}
                                                 onClick={async () => {
-                                                    await Router.push('/register')
+                                                    await Router.push('/register-internal')
                                                 }}
                                             >
                                                 Buy Now

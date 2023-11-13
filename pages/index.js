@@ -55,7 +55,7 @@ export default function Index() {
           <About aboutRef={aboutRef} />
           <Schedule scheduleRef={scheduleRef} />
           <Venue venueRef={venueRef} />
-          {/*<Plans planRef={planRef} />*/}
+          <Plans planRef={planRef} />
           <Sponsors sponsorRef={sponsorRef} />
           <Gallery galleryRef={galleryRef} />
           <Contact contactRef={contactRef} />
