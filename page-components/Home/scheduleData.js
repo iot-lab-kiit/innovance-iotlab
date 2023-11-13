@@ -8,7 +8,7 @@ export const scheduleData = [
                 venue: 'Campus 7 Auditorium',
             },
             {
-                timing: 'November 4, 6:30pm - 7:00pm',
+                timing: 'November 18, 6:30pm - 7:00pm',
                 title: 'Cultural Performance ',
                 type: 'Extra Event',
                 description: '',
@@ -16,7 +16,7 @@ export const scheduleData = [
 
             },
             {
-                timing: 'November 4, 7:00pm - 7:30pm',
+                timing: 'November 18, 7:00pm - 7:30pm',
                 title: 'Career Conference ',
                 type: 'Base Event',
                 description: 'An interactive career guidance session which will include tips on resume building and linkedin.',
