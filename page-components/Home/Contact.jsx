@@ -49,7 +49,7 @@ export default function Index({contactRef}) {
                                         },
                                     }}
                                          onClick={async () => {
-                                             await Router.push('https://twitter.com/iotlabkiit')
+                                             await Router.push('https://www.instagram.com/iot.lab.kiit/?hl=en')
                                          }}
                                     >
                                         <InstagramIcon sx={{ fontSize: 50 }} />
