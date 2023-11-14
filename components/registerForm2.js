@@ -604,10 +604,21 @@ export default function RegisterForm2() {
               <Stack pt={6}></Stack>
               <Stack spacing={4}>
                 <img src={`/images/qr2.jpeg`} alt={"img"} width={"100%"} />
-                <Stack pt={6}></Stack>
+                <Stack pt={3}></Stack>
+                
+                <Text as="em" color="tomato">
+                  For any queries:-
+                </Text>
+                <Text as="em" color="tomato">
+                  Vaibhav Tiwari - 9335374289
+                </Text>
+                <Text as="em" color="tomato">
+                  Anshul Kumar - 9984771258
+                </Text>
                 <Text as="em" color="tomato">
                   After the transaction please enter the transaction id below
                 </Text>
+
                 <FormControl id="email" isRequired isInvalid={txnIdError}>
                   <FormLabel>Transaction ID</FormLabel>
                   <Input
