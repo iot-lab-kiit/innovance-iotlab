@@ -64,7 +64,7 @@ export default function RegisterForm2() {
   const chkField2 = () => {
     setTxnIdError(false);
     let isField2Valid = false;
-    if (txnId.length < 20) {
+    if (txnId.length < 9) {
       setTxnIdError(true);
       isField2Valid = true;
     }
