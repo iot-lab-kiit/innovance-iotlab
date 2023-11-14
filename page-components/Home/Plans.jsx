@@ -45,7 +45,7 @@ export default function Index({planRef}) {
                                                     {each.title}
                                                 </Box>
                                                 <Box fontSize={'40px'} fontWeight={700} color={'#4763B7'} mb={3}>
-                                                  {each.price}
+                                                  <s>₹299</s> {each.price}
                                                 </Box>
                                                 <Box>
                                                     {

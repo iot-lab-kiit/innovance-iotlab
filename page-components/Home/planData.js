@@ -1,6 +1,6 @@
 export const planData = [
     {
-        title: 'Base Registration',
+        title: 'Early Bird Registration',
         price: '₹249',
         points: [
             'ID and Badges',
