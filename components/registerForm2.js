@@ -71,32 +71,6 @@ export default function RegisterForm2() {
     if (isField2Valid) {
       setFormNumber(2);
     } else {
-      // let planDescription = "";
-      // if (planType === "1") {
-      //   planDescription =
-      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events )";
-      //   if (foodOpted) {
-      //     planDescription += " + ₹499 (Food)";
-      //   }
-      // } else if (planType === "2") {
-      //   planDescription =
-      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Sub Events";
-      //   if (foodOpted) {
-      //     planDescription += " + ₹499 (Food)";
-      //   }
-      // } else if (planType === "3") {
-      //   planDescription =
-      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event";
-      //   if (foodOpted) {
-      //     planDescription += " + ₹499 (Food)";
-      //   }
-      // } else if (planType === "4") {
-      //   planDescription =
-      //     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event + Sub Events";
-      //   if (foodOpted) {
-      //     planDescription += " + ₹499 (Food)";
-      //   }
-      // }
       const data = {
         first_name: firstName,
         last_name: lastName,
@@ -114,8 +88,7 @@ export default function RegisterForm2() {
         txn_id: txnId,
         plan_description: planDescription,
       };
-      // fetch("https://api.iotkiit.in/items/innovance_registration", {
-      fetch("https://api.iotkiit.in/items/innovance2023_registration", {
+      fetch("https://api.iotkiit.in/items/innovance_registration2023", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
