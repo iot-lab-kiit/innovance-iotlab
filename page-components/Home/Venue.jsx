@@ -120,9 +120,10 @@ export default function Index({ venueRef }) {
                     onClick={async () => {
                       window.open(
                         index
-                          ? "https://maps.app.goo.gl/LX9dVmxx6YWW4Lev7"
-                          : "https://maps.app.goo.gl/KkV3Y8JSegmqX47x7",
+                          ? "https://maps.app.goo.gl/KkV3Y8JSegmqX47x7"
+                          : "https://maps.app.goo.gl/LX9dVmxx6YWW4Lev7",
                         "blank"
+                       
                       );
                     }}
                     variant={"outlined"}

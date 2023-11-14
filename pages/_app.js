@@ -9,7 +9,8 @@ import {
   VisuallyHidden,
 } from '@chakra-ui/react';
 import { extendTheme } from '@chakra-ui/react';
-import { FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaInstagram, FaLinkedin, FaTwitter} from 'react-icons/fa';
+import { CgMail } from "react-icons/cg";
 import {useRouter} from "next/router";
 import {useEffect} from "react";
 const SocialButton = ({
@@ -83,8 +84,8 @@ function MyApp({ Component, pageProps }) {
           align={{ base: 'center', md: 'center' }}>
           <Text>© 2023 Innovance 2k23. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'https://twitter.com/iotlabkiit'}>
-              <FaTwitter />
+            <SocialButton label={'Mail'} href={'mailto:iotkiit.in'}>
+             <CgMail />
             </SocialButton>
             <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/company/iotlabkiit/'}>
               <FaLinkedin />

@@ -4,6 +4,7 @@ import {Button, Container, Grid} from "@mui/material";
 import EmailIcon from "@mui/icons-material/Email";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from '@mui/icons-material/Instagram';
 import {useRouter} from "next/router";
 
 export default function Index({contactRef}) {
@@ -51,7 +52,7 @@ export default function Index({contactRef}) {
                                              await Router.push('https://twitter.com/iotlabkiit')
                                          }}
                                     >
-                                        <TwitterIcon sx={{ fontSize: 50 }} />
+                                        <InstagramIcon sx={{ fontSize: 50 }} />
                                     </Box>
                                 </Box>
                             </Grid>
