@@ -26,6 +26,7 @@ import {
   StatHelpText,
   StatArrow,
   useColorModeValue,
+  color,
 } from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import { useState, useEffect } from "react";
@@ -579,6 +580,9 @@ export default function RegisterForm2() {
                 <img src={`/images/qr2.jpeg`} alt={"img"} width={"100%"} />
                 <Stack pt={3}></Stack>
                 
+                <Text as="em" color="tomato">
+                Upon completing the payment, if you encounter any registration issues, please open innovance.iotkiit.in in Chrome and proceed to fill out the registration form using the same transaction ID.
+                </Text>
                 <Text as="em" color="tomato">
                   For any queries:-
                 </Text>
