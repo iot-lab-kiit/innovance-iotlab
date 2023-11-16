@@ -1,6 +1,6 @@
 import Box from "@mui/material/Box";
 import Title from "./Title";
-import {Button, Container, Grid, Hidden, Avatar, Typography} from "@mui/material";
+import {Button, Container, Grid, Hidden, Avatar, Typography, ImageList} from "@mui/material";
 import Image from "next/image";
 export default function Index({peopleRef, list}) {
 
@@ -78,36 +78,36 @@ export default function Index({peopleRef, list}) {
                                 }}
                             >   
                                 
-                                <Image
+                                <Avatar
                                     alt={"Striver"} 
                                     src="/images/Striver Innovance.png" 
-                                    width={380}
+                                    width={500}
                                     height={380}
-                                    // sx={{ 
-                                    //     width: 380, 
-                                    //     height: 380,
-                                    //     position: 'relative',
-                                    //     transition: 'filter 0.3s ease-in-out', // Add transition for smooth color change
-                                    //     '&:hover': { 
-                                    //     filter: 'brightness(0.5)',
-                                    //     '&::after': {
-                                    //         // content:`"${Striver}"`, // Add each.position
-                                    //         position: 'absolute',
-                                    //         top: 0,
-                                    //         left: 0,
-                                    //         width: '100%',
-                                    //         height: '100%',
-                                    //         display: 'flex',
-                                    //         alignItems: 'center',
-                                    //         justifyContent: 'center',
-                                    //         backgroundColor: 'rgb(49, 69, 128, 0.9)',
-                                    //         color: '#fff', // Make the text white
-                                    //         borderRadius: '50%',
-                                    //         transition: 'background-color 0.3s ease-in-out', // Add transition for smooth color change
-                                    //         filter: 'none', // Reset the filter property
-                                    //     }
-                                    //     }
-                                    // }} 
+                                    sx={{ 
+                                        width: 380, 
+                                        height: 380,
+                                        position: 'relative',
+                                        transition: 'filter 0.3s ease-in-out', // Add transition for smooth color change
+                                        '&:hover': { 
+                                        filter: 'brightness(0.5)',
+                                        '&::after': {
+                                            // content:`"${Striver}"`, // Add each.position
+                                            position: 'absolute',
+                                            top: 0,
+                                            left: 0,
+                                            width: '100%',
+                                            height: '100%',
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            backgroundColor: 'rgb(49, 69, 128, 0.9)',
+                                            color: '#fff', // Make the text white
+                                            borderRadius: '50%',
+                                            transition: 'background-color 0.3s ease-in-out', // Add transition for smooth color change
+                                            filter: 'none', // Reset the filter property
+                                        }
+                                        }
+                                    }} 
                                     />
                                     {/* <div style={{fontSize: '15px' }}>Striver</div> */}
                                 </Box>
