@@ -10,7 +10,7 @@ import Gallery from "../page-components/Home/Gallery";
 import Contact from "../page-components/Home/Contact";
 import Venue from "../page-components/Home/Venue";
 import People from '../page-components/Home/People';
-import Guest from '../page-components/Home/Guest';
+// import Guest from '../page-components/Home/Guest';
 import { useRef } from "react";
 
 
@@ -65,7 +65,7 @@ export default function Index(props) {
           />
           <Main mainRef={mainRef} scheduleRef={scheduleRef} />
           <About aboutRef={aboutRef} />
-          <Guest/>
+          {/* <Guest/> */}
           <Schedule scheduleRef={scheduleRef} />
           <Venue venueRef={venueRef} />
           <Plans planRef={planRef} />
