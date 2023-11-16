@@ -48,7 +48,7 @@ export default function RegisterForm2() {
     "Basic Entry ( Opening & Closing Ceremony + Extra Events ) & Main Event + Sub Events + Food"
   );
   const [foodOpted, setFoodOpted] = useState(false);
-  const [totalFare, setTotalFare] = useState(249.0);
+  const [totalFare, setTotalFare] = useState(299.0);
   const [txnId, setTxnId] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
   const [regError, setRegError] = useState(false);
