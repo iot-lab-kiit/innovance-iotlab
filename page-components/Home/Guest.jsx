@@ -12,8 +12,8 @@ export default function Index({peopleRef, list}) {
                     <Box textAlign={'center'} color={'#616161'} maxWidth={'750px'}>
                     Get ready to witness greatness as we unveil the star of our Innovance 2.0. The YouTube sensation, a master of motivation, a tech wizard in data structures and algorithms, and the brains behind the groundbreaking SDE Sheet! 
                     </Box>
-                    <Box textAlign={'center'} color={'#616161'} maxWidth={'750px'}>
-                      Limited Book Slot. Hurry Up !!
+                    <Box textAlign={'center'} color={'#616161'} maxWidth={'750px'} mt={2}>
+                    Limited Slots! Book Yours Now! Hurry Up!!
                     </Box>
                     <Box mt={8} />
                     
@@ -80,18 +80,18 @@ export default function Index({peopleRef, list}) {
                                 
                                 <Avatar
                                     alt={"Striver"} 
-                                    src="/images/Striver Innovance.png" 
-                                    width={500}
-                                    height={380}
+                                    src="/images/striver.jpg" 
+                                    // width={300}
+                                    // height={380}
                                     sx={{ 
-                                        width: 380, 
-                                        height: 380,
+                                        width: 300, 
+                                        height: 300,
                                         position: 'relative',
                                         transition: 'filter 0.3s ease-in-out', // Add transition for smooth color change
                                         '&:hover': { 
                                         filter: 'brightness(0.5)',
                                         '&::after': {
-                                            // content:`"${Striver}"`, // Add each.position
+                                            content:`"Raj Vikramaditya (Striver)"`, // Add each.position
                                             position: 'absolute',
                                             top: 0,
                                             left: 0,
