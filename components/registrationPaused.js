@@ -35,10 +35,10 @@ export default function Registerationpaused() {
                 <Stack spacing={8} mx={"auto"} maxW={"lg"} py={12} px={6}>
                     <Stack align={"center"}>
                         <Heading fontSize={"4xl"} textAlign={"center"}>
-                            Registerations Closed 😊
+                        Registrations Closed 😊
                         </Heading>
                         <Heading fontSize={"2xl"} textAlign={"center"}>
-                        Thank you for the overwhelming response to our event; registrations are now closed. We look forward to welcoming you to our next exciting event in the future!
+                        Thank you for the overwhelming response to our event, registrations are now closed. We look forward to welcoming you to our next exciting event in the future!
                         </Heading>
                         {/* <Typography variant="body1">We are pleased with the overwhemling responses! See you in the event</Typography> */}
                     </Stack>
