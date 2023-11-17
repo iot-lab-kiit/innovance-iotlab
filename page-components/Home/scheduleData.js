@@ -19,8 +19,8 @@ export const scheduleData = [
     {
         schedule: [
             {
-                timing: 'November 19, 10:00am -5:00pm',
-                title: 'FuturaForage',
+                timing: 'November 19, 10:00am -4:00pm',
+                title: 'FuturaForge',
                 // type: 'Main Event',
                 description: 'Embark on an innovative journey! From ideation to coding, master the art of documentation, design, and collaboration using Figma and Git. Explore the concepts of Frontend and Backend Dev with top trending tech stacks. Integrate ML, CyberSecurity, and IoT seamlessly. Prioritize security, testing, and smooth deployment. Learn effective project/product marketing strategies and pitch your ideas for expert guidance from our top IoT Lab teams.',
                 venue: 'Campus 17 Auditorium',

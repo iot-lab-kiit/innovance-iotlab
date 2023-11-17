@@ -144,7 +144,8 @@ export default function RegisterForm2() {
       setBranchError(true);
       isField1Valid = true;
     }
-    if (year != "1" && year != "2" && year != "3" && year != "4") {
+    // if (year != "1" && year != "2" && year != "3" && year != "4") {
+    if (year != "2" && year != "3" && year != "4") {
       setYearError(true);
       isField1Valid = true;
     }
@@ -277,7 +278,7 @@ export default function RegisterForm2() {
                           setYear(e.target.value);
                         }}
                       >
-                        <option value="1">1ST</option>
+                        {/* <option value="1">1ST</option> */}
                         <option value="2">2ND</option>
                         <option value="3">3RD</option>
                         <option value="4">4TH</option>
