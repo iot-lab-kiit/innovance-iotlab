@@ -596,6 +596,9 @@ export default function RegisterForm2() {
                 <Text as="em" color="tomato">
                   After the transaction please enter the transaction id below
                 </Text>
+                <Text as="em" color="tomato">
+                  In case you have done payment by Phonepe please enter UTR NO.
+                </Text>
 
                 <FormControl id="email" isRequired isInvalid={txnIdError}>
                   <FormLabel>Transaction ID</FormLabel>
